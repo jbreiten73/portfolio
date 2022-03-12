@@ -72,7 +72,7 @@ case 900: romanHundreds = romans[100] + romans[1000]; break; }
  for (let i = 1000; i < thousands; i+=1000) 
 { romanThousands += romans[1000]; } break; } 
 if (num > 3999) { return errorMsg; } 
-else { return romanThousands + romanHundreds + romanTens + romanOnes; }}}
+else { return romanThousands + romanHundreds + romanTens + romanOnes; }}
 console.log(convertToRoman(3999))
 </script>
 </html>
