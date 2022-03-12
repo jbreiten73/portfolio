@@ -59,5 +59,17 @@ case 400: romanHundreds = romans[100] + romans[500];
  break; 
 case 500: romanHundreds = romans[500]; 
 break;
-</script>
-</html>
+case 600: case 700: case 800: 
+for (let i = 600; i <= hundreds; i+=100) 
+{ romansPostD += romans[100]; }
+ romanHundreds = romans[500] + romansPostD;
+ break; 
+case 900: romanHundreds = romans[100] + romans[1000]; break; } 
+// thousands block
+ switch (thousands)
+ { case 0: romanThousands = ''; break;
+ case 1000: case 2000: case 3000:
+ for (let i = 1000; i < thousands; i+=1000) 
+{ romanThousands += romans[1000]; } break; } 
+if (num > 3999) { return errorMsg; } 
+else { return romanThousands + romanHundreds + romanTens + romanOnes; }}
